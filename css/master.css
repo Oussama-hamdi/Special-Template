@@ -4,6 +4,75 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+
+/* Start Setting Box */
+.settings-box {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  min-height: 100vh;
+  background-color: #fff;
+  z-index: 10000;
+  transition: 0.3s;
+}
+.settings-box.show {
+  left: 0;
+}
+.settings-box .toggle-settings {
+  position: absolute;
+  right: -30px;
+  top: 100px;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+.settings-box .toggle-settings .icon {
+  padding: 8px 0;
+  width: 30px;
+}
+.settings-box .settings-container .option-box {
+  padding: 20px;
+}
+.settings-box .settings-container .option-box h4 {
+  margin: 0;
+  color: #555;
+}
+.settings-box .settings-container .option-box .colors-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.settings-box .settings-container .option-box .colors-list li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #222;
+  opacity: 0.5;
+  cursor: pointer;
+  display: inline-block;
+}
+.settings-box .settings-container .option-box .colors-list li.active {
+  opacity: 1;
+}
+.settings-box .option-box .colors-list li:first-child {
+  background-color: var(--main-color);
+}
+.settings-box .option-box .colors-list li:nth-child(2) {
+  background-color: #e91e63;
+}
+.settings-box .option-box .colors-list li:nth-child(3) {
+  background-color: #009688;
+}
+.settings-box .option-box .colors-list li:nth-child(4) {
+  background-color: #03a9fa;
+}
+.settings-box .option-box .colors-list li:nth-child(5) {
+  background-color: #4caf50;
+}
+/* End Setting Box */
+
 /* Start Landing Page */
 .landing-page {
   min-height: 100vh;

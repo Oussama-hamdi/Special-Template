@@ -27,13 +27,17 @@ body {
   text-align: center;
   cursor: pointer;
   font-size: 20px;
+  border-radius: 0 6px 6px 0;
 }
 .settings-box .toggle-settings .icon {
   padding: 8px 0;
   width: 30px;
 }
 .settings-box .settings-container .option-box {
-  padding: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: #eee;
+  margin: 10px;
 }
 .settings-box .settings-container .option-box h4 {
   margin: 0;
@@ -43,13 +47,14 @@ body {
   list-style: none;
   text-align: center;
   padding: 0;
+  margin: 12px 0 0;
 }
 .settings-box .settings-container .option-box .colors-list li {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: #222;
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: pointer;
   display: inline-block;
 }
@@ -57,7 +62,7 @@ body {
   opacity: 1;
 }
 .settings-box .option-box .colors-list li:first-child {
-  background-color: var(--main-color);
+  background-color: #ff9800;
 }
 .settings-box .option-box .colors-list li:nth-child(2) {
   background-color: #e91e63;
@@ -129,6 +134,7 @@ body {
   z-index: 2;
   color: #fff;
   text-align: center;
+  width: 100%;
 }
 .introduction-text h1 {
   font-size: 34px;

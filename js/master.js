@@ -47,6 +47,20 @@ colorsLi.forEach((li) => {
   });
 });
 
+// Swtich Random Background Option
+let randomBackgroundEl = document.querySelectorAll(".random-backgrounds span");
+
+randomBackgroundEl.forEach((span) => {
+  // remove Class Active from The spans
+  span.addEventListener("click", (e) => {
+    randomBackgroundEl.forEach((span) => {
+      span.classList.remove("active");
+    });
+    // Add Class Active To The Target span
+    e.target.classList.add("active");
+  });
+});
+
 // Select Landing Page Elements
 let images = [
   "images/01.jpeg",
@@ -68,4 +82,4 @@ function random(arr) {
   return Math.floor(Math.random() * arr.length);
 }
 
-// Move To Video 11
+// Move To Video 12

@@ -11,10 +11,13 @@ if (mainColor !== null) {
       e.classList.add("active");
     }
   });
-  // document
-  //   .querySelector(`[data-color="${localStorage.getItem("color-option")}"]`)
-  //   .classList.add("active");
 }
+
+// Random Background Option
+let backgroundOption = true;
+
+// Variable To Control The BackgroundInterval
+let backgroundInterval;
 
 // Toggle Spin Class on Icon
 document.querySelector(".toggle-settings .icon").onclick = function () {
@@ -58,6 +61,14 @@ randomBackgroundEl.forEach((span) => {
     });
     // Add Class Active To The Target span
     e.target.classList.add("active");
+
+    if (e.target.dataset.background === "yes") {
+      backgroundOption = true;
+      randomizeImgs();
+    } else {
+      backgroundOption = false;
+      clearInterval(backgroundInterval);
+    }
   });
 });
 
@@ -72,14 +83,21 @@ let images = [
 
 let landingPage = document.querySelector(".landing-page");
 
-setInterval(() => {
-  landingPage.style.cssText = `background-image: url("${
-    images[random(images)]
-  }") !important;`;
-}, 10000);
+// Function To Randomize Images
+function randomizeImgs() {
+  if (backgroundOption) {
+    backgroundInterval = setInterval(() => {
+      landingPage.style.cssText = `background-image: url("${
+        images[random(images)]
+      }") !important;`;
+    }, 1000);
+  }
+}
+
+randomizeImgs();
 
 function random(arr) {
   return Math.floor(Math.random() * arr.length);
 }
 
-// Move To Video 12
+// Move To Video 13

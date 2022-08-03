@@ -90,7 +90,7 @@ function randomizeImgs() {
       landingPage.style.cssText = `background-image: url("${
         images[random(images)]
       }") !important;`;
-    }, 1000);
+    }, 10000);
   }
 }
 

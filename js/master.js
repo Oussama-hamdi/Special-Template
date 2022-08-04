@@ -19,6 +19,22 @@ let backgroundOption = true;
 // Variable To Control The BackgroundInterval
 let backgroundInterval;
 
+// Check if There's Local Storage Random Background Item
+let backgroundLocalItem = localStorage.getItem("background_option");
+
+// Check if Random Background Local Storage Not Empty
+if (backgroundLocalItem !== null) {
+  if (backgroundLocalItem === "true") {
+    backgroundOption = true;
+  } else {
+    backgroundOption = false;
+    document.querySelectorAll(".random-backgrounds span").forEach((e) => {
+      e.classList.remove("active");
+    });
+    document.querySelector(".random-backgrounds .no").classList.add("active");
+  }
+}
+
 // Toggle Spin Class on Icon
 document.querySelector(".toggle-settings .icon").onclick = function () {
   // toggle Class fa-spin
@@ -64,10 +80,16 @@ randomBackgroundEl.forEach((span) => {
 
     if (e.target.dataset.background === "yes") {
       backgroundOption = true;
+
       randomizeImgs();
+
+      localStorage.setItem("background_option", true);
     } else {
       backgroundOption = false;
+
       clearInterval(backgroundInterval);
+
+      localStorage.setItem("background_option", false);
     }
   });
 });

@@ -238,10 +238,11 @@ body {
 }
 .skills .skill-box .skill-progress span {
   position: absolute;
-  width: 45%;
+  width: 0;
   height: 100%;
   top: 0;
   left: 0;
   background-color: var(--main-color);
+  transition: all 1s;
 }
 /* End Skills */

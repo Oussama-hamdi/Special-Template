@@ -122,4 +122,30 @@ function random(arr) {
   return Math.floor(Math.random() * arr.length);
 }
 
-// Move To Video 16
+// Select Skills Selector
+
+let ourSkills = document.querySelector(".skills");
+
+window.onscroll = function () {
+  // Skills Offset Top
+  let skillsOffsetTop = ourSkills.offsetTop;
+  // Skills Outer Height
+  let skillsOuterHeight = ourSkills.offsetHeight;
+
+  // Window Height
+  let windowHeight = this.innerHeight;
+
+  // Window Scroll Top
+  let windowScrollTop = this.pageYOffset;
+
+  let height = skillsOffsetTop + skillsOuterHeight - windowHeight - 450;
+
+  if (windowScrollTop > height) {
+    let allSpans = document.querySelectorAll(".skills .skill-progress span");
+    allSpans.forEach((span) => {
+      span.style.width = span.dataset.progress;
+    });
+  }
+};
+
+// Move To Video 17

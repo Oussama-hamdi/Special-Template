@@ -299,8 +299,8 @@ body {
   top: -15px;
   right: -15px;
   background-color: var(--main-color);
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,10 +309,71 @@ body {
   color: #fff;
   font-weight: bold;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .popup-box img {
   max-width: 100%;
 }
 /* End Gallery */
+/* Start timeline */
+.timeline {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #eee;
+}
+.timeline .timeline-content {
+  position: relative;
+  overflow: hidden;
+}
+.timeline .timeline-content::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+.timeline .timeline-content .year {
+  margin: 20px auto;
+  width: 50px;
+  background-color: var(--main-color);
+  position: relative;
+  z-index: 2;
+  border-radius: 4px;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+.timeline .timeline-content .left,
+.timeline .timeline-content .right {
+  width: 50%;
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline .timeline-content .items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.timeline .timeline-content .items .content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+}
+.timeline .timeline-content .items .content h3 {
+  font-weight: bold;
+  color: var(--main-color);
+  margin: 0 0 10px;
+}
+.timeline .timeline-content .items .content p {
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* End timeline */

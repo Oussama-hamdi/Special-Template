@@ -463,3 +463,74 @@ body {
   color: #777;
 }
 /* End Features */
+/* Start Testimonials */
+.testimonials {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.testimonials::before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--main-color);
+}
+.testimonials::after {
+  content: "";
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #333;
+}
+.testimonials h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+  margin: 0 0 60px;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 4px;
+}
+.testimonials .holder {
+  position: relative;
+  z-index: 2;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.testimonials .holder .ts-box {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.testimonials .holder .ts-box img {
+  max-width: 100px;
+}
+.testimonials .holder .ts-box > p {
+  margin: 0 0 15px;
+  line-height: 1.5;
+  font-size: 18px;
+  color: #444;
+  font-style: italic;
+}
+.testimonials .holder .ts-box .person-info {
+  overflow: hidden;
+}
+.testimonials .holder .ts-box .person-info h4 {
+  margin: 15px 0 5px;
+}
+.testimonials .holder .ts-box .person-info p {
+  color: #444;
+}
+/* End Testimonials */

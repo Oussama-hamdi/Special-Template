@@ -102,9 +102,59 @@ body {
 .settings-box .random-backgrounds span:hover {
   opacity: 1;
 }
-
 /* End Setting Box */
-
+/* Start Nav Bullets */
+.nav-bullets {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  z-index: 1000;
+}
+.nav-bullets .bullet {
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--main-color);
+  border-radius: 50%;
+  margin: 10px auto;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+  margin: 10px 0;
+}
+.nav-bullets .bullet:hover .tooltip {
+  transform: translateX(0px);
+  opacity: 1;
+  visibility: visible;
+}
+.nav-bullets .bullet .tooltip {
+  background-color: var(--main-color);
+  width: 100px;
+  color: #fff;
+  padding: 4px 10px;
+  position: absolute;
+  right: 48px;
+  top: 0;
+  text-align: center;
+  transition: 1s;
+  font-weight: bold;
+  opacity: 0;
+  visibility: hidden;
+  cursor: default;
+  pointer-events: none;
+  transform: translateX(-40px);
+}
+.nav-bullets .bullet .tooltip::after {
+  content: "";
+  position: absolute;
+  right: -27px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 14px solid;
+  border-color: transparent transparent transparent var(--main-color);
+}
+/* End Nav Bullets */
 /* Start Landing Page */
 .landing-page {
   min-height: 100vh;

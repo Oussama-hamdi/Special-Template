@@ -228,4 +228,14 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Move To Video 24
+const allBullets = document.querySelectorAll(".nav-bullets .bullet");
+
+allBullets.forEach((bullet) => {
+  bullet.addEventListener("click", (e) => {
+    document.querySelector(`.${e.target.dataset.section}`).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
+
+// Move To Video 26

@@ -228,14 +228,23 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// Select All Links
 const allBullets = document.querySelectorAll(".nav-bullets .bullet");
+const allLinks = document.querySelectorAll(".links a");
 
-allBullets.forEach((bullet) => {
-  bullet.addEventListener("click", (e) => {
-    document.querySelector(`.${e.target.dataset.section}`).scrollIntoView({
-      behavior: "smooth",
+function scrollTo(elements) {
+  elements.forEach((ele) => {
+    ele.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.querySelector(`.${e.target.dataset.section}`).scrollIntoView({
+        behavior: "smooth",
+      });
     });
   });
-});
+}
 
-// Move To Video 26
+scrollTo(allBullets);
+scrollTo(allLinks);
+
+// Move To Video 28

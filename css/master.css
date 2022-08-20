@@ -82,8 +82,8 @@ body {
 .settings-box .option-box .colors-list li:nth-child(5) {
   background-color: #4caf50;
 }
-.settings-box .random-backgrounds .yes,
-.settings-box .random-backgrounds .no {
+.settings-box .yes,
+.settings-box .no {
   width: 40px;
   background: #3f51b5;
   color: #fff;
@@ -98,8 +98,8 @@ body {
   transition: 0.3s;
 }
 
-.settings-box .random-backgrounds span.active,
-.settings-box .random-backgrounds span:hover {
+.settings-box span.active,
+.settings-box span:hover {
   opacity: 1;
 }
 /* End Setting Box */

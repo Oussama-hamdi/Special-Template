@@ -247,4 +247,37 @@ function scrollTo(elements) {
 scrollTo(allBullets);
 scrollTo(allLinks);
 
-// Move To Video 28
+let bulletsSpan = document.querySelectorAll(".bullets-option span");
+let bulletsContainer = document.querySelector(".nav-bullets");
+let bulletLocalItem = localStorage.getItem("bullets-option");
+
+if (bulletLocalItem !== null) {
+  bulletsSpan.forEach((span) => {
+    span.classList.remove("active");
+  });
+
+  if (bulletLocalItem === "block") {
+    bulletsContainer.style.display = "block";
+    document.querySelector(".bullets-option .yes").classList.add("active");
+  } else {
+    bulletsContainer.style.display = "none";
+    document.querySelector(".bullets-option .no").classList.add("active");
+  }
+}
+
+bulletsSpan.forEach((span) => {
+  span.addEventListener("click", (e) => {
+    if (span.dataset.display === "show") {
+      bulletsContainer.style.display = "block";
+      document.querySelector(".bullets-option .yes").classList.add("active");
+      document.querySelector(".bullets-option .no").classList.remove("active");
+
+      localStorage.setItem("bullets-option", "block");
+    } else {
+      bulletsContainer.style.display = "none";
+      document.querySelector(".bullets-option .yes").classList.remove("active");
+      document.querySelector(".bullets-option .no").classList.add("active");
+      localStorage.setItem("bullets-option", "none");
+    }
+  });
+});

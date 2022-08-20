@@ -281,3 +281,10 @@ bulletsSpan.forEach((span) => {
     }
   });
 });
+
+// Reset Button
+
+document.querySelector(".reset-options").onclick = () => {
+  localStorage.clear();
+  window.location.reload();
+};

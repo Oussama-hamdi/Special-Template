@@ -288,5 +288,3 @@ document.querySelector(".reset-options").onclick = () => {
   localStorage.clear();
   window.location.reload();
 };
-
-// Move To Video 31

@@ -17,7 +17,7 @@ body {
   width: 210px;
   min-height: 100vh;
   background-color: #fff;
-  z-index: 10000;
+  z-index: 1000;
   transition: 0.3s;
 }
 .settings-box.show {
@@ -181,6 +181,10 @@ body {
   top: 0;
   z-index: 1;
 }
+.landing-page .container {
+  position: relative;
+  z-index: 1000;
+}
 .header-area {
   position: relative;
   z-index: 2;
@@ -240,13 +244,9 @@ body {
   margin-bottom: 4px;
   background-color: #fff;
   display: block;
+  transition: 0.3s;
 }
-.header-area .toggle-menu span:nth-child(1) {
-}
-.header-area .toggle-menu span:nth-child(2) {
-}
-.header-area .toggle-menu span:nth-child(3) {
-}
+
 .introduction-text {
   position: absolute;
   left: 50%;
@@ -255,11 +255,17 @@ body {
   z-index: 2;
   color: #fff;
   text-align: center;
-  width: 100%;
+  width: 95%;
   z-index: 1;
 }
+
 .introduction-text h1 {
   font-size: 34px;
+}
+@media (max-width: 575px) {
+  .introduction-text h1 {
+    font-size: 26px;
+  }
 }
 .introduction-text h1 span {
   color: var(--main-color);
@@ -296,15 +302,30 @@ body {
     display: inline-block;
   }
 }
-/* End Landing Page */ /* Start About Us */
+/* End Landing Page */
+/* Start About Us */
 .about-us {
   padding-top: 50px;
   padding-bottom: 50px;
   display: flex;
 }
+@media (max-width: 767px) {
+  .about-us {
+    display: block;
+    text-align: center;
+  }
+  .about-us .info-box {
+    padding: 0;
+  }
+}
 .about-us .info-box {
   flex: 1;
   padding: 30px;
+}
+@media (max-width: 767px) {
+  .about-us .info-box {
+    padding: 0;
+  }
 }
 .about-us .info-box h2 {
   font-weight: bold;
@@ -345,10 +366,21 @@ body {
   padding: 15px;
   margin-bottom: 15px;
 }
+@media (max-width: 767px) {
+  .skills .skill-box {
+    display: block;
+  }
+}
 .skills .skill-box .skill-name {
   font-weight: bold;
   width: 140px;
   text-align: center;
+}
+@media (max-width: 767px) {
+  .skills .skill-box .skill-name {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }
 .skills .skill-box .skill-progress {
   height: 30px;
@@ -372,6 +404,7 @@ body {
 .gallery {
   padding-top: 50px;
   padding-bottom: 50px;
+  text-align: center;
 }
 .gallery h2 {
   color: var(--main-color);

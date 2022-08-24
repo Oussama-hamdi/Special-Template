@@ -288,3 +288,32 @@ document.querySelector(".reset-options").onclick = () => {
   localStorage.clear();
   window.location.reload();
 };
+
+// Toggle-menu
+let toggle = document.querySelector(".toggle-menu");
+let tLinks = document.querySelector(".links");
+
+toggle.onclick = (e) => {
+  e.stopPropagation();
+  toggle.classList.toggle("toggle-menu-active");
+  document.querySelector(".links-container .links").classList.toggle("open");
+};
+
+// Click Anywhere To Remove links
+
+document.addEventListener("click", (e) => {
+  if (e.target !== toggle && e.target !== tLinks) {
+    if (tLinks.classList.contains("open")) {
+      toggle.classList.toggle("toggle-menu-active");
+      document
+        .querySelector(".links-container .links")
+        .classList.toggle("open");
+    }
+  }
+});
+
+tLinks.onclick = (e) => {
+  e.stopPropagation();
+};
+
+// Move To Video 34

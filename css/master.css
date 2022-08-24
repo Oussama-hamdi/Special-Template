@@ -5,7 +5,6 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 .container {
-  width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
   margin: auto;
@@ -194,13 +193,14 @@ body {
   padding: 15px;
   font-weight: bold;
 }
+.header-area .links-container {
+  width: 100%;
+  text-align: right;
+}
 .header-area .links {
   list-style: none;
   width: 100%;
-  text-align: right;
   padding-left: 0;
-  padding-right: 20px;
-  font-size: 15px;
 }
 .header-area .links li {
   display: inline-block;
@@ -215,6 +215,38 @@ body {
 .header-area .links li a.active {
   color: var(--main-color);
 }
+.header-area .toggle-menu {
+  background: none;
+  border: none;
+  width: 40px;
+  cursor: pointer;
+  margin-top: 15px;
+  display: none;
+  position: relative;
+}
+.header-area .toggle-menu-active::before {
+  content: "";
+  position: absolute;
+  border: 15px solid transparent;
+  border-bottom-color: #fff;
+  left: 5px;
+  bottom: -18px;
+}
+.header-area .toggle-menu:focus {
+  outline: none;
+}
+.header-area .toggle-menu span {
+  height: 3px;
+  margin-bottom: 4px;
+  background-color: #fff;
+  display: block;
+}
+.header-area .toggle-menu span:nth-child(1) {
+}
+.header-area .toggle-menu span:nth-child(2) {
+}
+.header-area .toggle-menu span:nth-child(3) {
+}
 .introduction-text {
   position: absolute;
   left: 50%;
@@ -224,6 +256,7 @@ body {
   color: #fff;
   text-align: center;
   width: 100%;
+  z-index: 1;
 }
 .introduction-text h1 {
   font-size: 34px;
@@ -235,8 +268,35 @@ body {
   line-height: 1.6;
   font-size: 20px;
 }
-/* End Landing Page */
-/* Start About Us */
+@media (max-width: 991px) {
+  .header-area .links {
+    display: none;
+  }
+  .header-area .links.open {
+    display: block;
+    background-color: #fff;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    border-radius: 4px;
+    z-index: 100;
+  }
+  .header-area .links.open li {
+    display: block;
+    text-align: left;
+    margin: 10px;
+  }
+  .header-area .links.open li a {
+    color: var(--main-color);
+    font-weight: bold;
+  }
+  .header-area .toggle-menu {
+    display: inline-block;
+  }
+}
+/* End Landing Page */ /* Start About Us */
 .about-us {
   padding-top: 50px;
   padding-bottom: 50px;

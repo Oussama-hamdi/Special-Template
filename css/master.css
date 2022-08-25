@@ -206,6 +206,11 @@ body {
   width: 100%;
   padding-left: 0;
 }
+@media (max-width: 767px) {
+  .header-area .links {
+    max-width: 90%;
+  }
+}
 .header-area .links li {
   display: inline-block;
   margin-left: 10px;
@@ -509,6 +514,21 @@ body {
   margin-bottom: 40px;
   position: relative;
 }
+@media (max-width: 767px) {
+  .timeline .timeline-content .left,
+  .timeline .timeline-content .right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .timeline .timeline-content .left::before,
+  .timeline .timeline-content .right::before {
+    display: none;
+  }
+  .timeline .timeline-content .items .right .content::before,
+  .timeline .timeline-content .items .left .content::before {
+    display: none;
+  }
+}
 .timeline .timeline-content .left {
   align-self: start;
 }
@@ -538,6 +558,12 @@ body {
   align-items: center;
   gap: 50px;
   height: 440px;
+}
+@media (max-width: 767px) {
+  .timeline .timeline-content .items {
+    display: block;
+    text-align: center;
+  }
 }
 .timeline .timeline-content .items .content {
   padding: 20px;
@@ -648,7 +674,7 @@ body {
   font-size: 30px;
   color: #fff;
   margin: 0 0 60px;
-  text-align: left;
+  text-align: center;
   position: relative;
   z-index: 2;
   letter-spacing: 4px;
@@ -662,6 +688,13 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+}
+@media (max-width: 767px) {
+  .testimonials .holder {
+    row-gap: 20px;
+    max-width: 80%;
+    flex-direction: column;
+  }
 }
 .testimonials .holder .ts-box {
   background-color: #fff;

@@ -315,5 +315,3 @@ document.addEventListener("click", (e) => {
 tLinks.onclick = (e) => {
   e.stopPropagation();
 };
-
-// Move To Video 36

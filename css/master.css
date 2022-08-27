@@ -22,6 +22,7 @@ body {
 }
 .settings-box.show {
   left: 0;
+  z-index: 1001;
 }
 .settings-box .toggle-settings {
   position: absolute;
@@ -564,6 +565,12 @@ body {
     display: block;
     text-align: center;
   }
+  .timeline .timeline-content .items:not(:last-child) {
+    margin-bottom: 90px;
+  }
+  .timeline .timeline-content .items:last-child {
+    margin-bottom: 60px;
+  }
 }
 .timeline .timeline-content .items .content {
   padding: 20px;
@@ -761,6 +768,17 @@ body {
 .contact .right {
   width: 50%;
 }
+@media (max-width: 767px) {
+  .contact form {
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 5px;
+  }
+  .contact .left,
+  .contact .right {
+    width: 90%;
+  }
+}
 .contact form input:not([type="submit"]),
 .contact form textarea {
   display: block;
@@ -796,6 +814,19 @@ body {
   font-weight: bold;
 }
 /* End Contact Us */
+/* Start Footer */
+.footer {
+  background-color: #333;
+  color: #eee;
+  padding: 20px;
+  text-align: center;
+}
+.footer span {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 22px;
+}
+/* End Footer */
 /* Start Grid System */
 @media (min-width: 576px) {
   .container {
